@@ -5,8 +5,8 @@ class Solution {
         {
             if(map.containsKey(nums[i]))
             {
-                int prev = map.get(nums[i]);
-                if(i-prev <= k)
+                map.put(nums[i],i-map.get(nums[i]));
+                if(map.get(nums[i]) <= k)
                 {
                     return true;
                 }
